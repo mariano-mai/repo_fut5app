@@ -5,7 +5,7 @@ public class Jugador {
 	int id, altura, cantGoles, cantPartidosJugados, numeroCamiseta;
 	String nombre, apellido;
 	boolean esCapitan;
-	Posicion posicion;
+	String posicion;
 	Equipo equipo;
 	
 	public Jugador() {
@@ -14,7 +14,7 @@ public class Jugador {
 	}
 
 	public Jugador(int id, int altura, int cantGoles, int cantPartidosJugados, int numeroCamiseta, String nombre,
-			String apellido, boolean esCapitan, Posicion posicion, Equipo equipo) {
+			String apellido, boolean esCapitan, String posicion, Equipo equipo) {
 		super();
 		this.id = id;
 		this.altura = altura;
@@ -92,20 +92,20 @@ public class Jugador {
 		this.esCapitan = esCapitan;
 	}
 
-	public Posicion getPosicion() {
-		return posicion;
-	}
-
-	public void setPosicion(Posicion posicion) {
-		this.posicion = posicion;
-	}
-
 	public Equipo getEquipo() {
 		return equipo;
 	}
 
 	public void setEquipo(Equipo equipo) {
 		this.equipo = equipo;
+	}
+
+	public String getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(String posicion) {
+		this.posicion = posicion;
 	}
 	
 	

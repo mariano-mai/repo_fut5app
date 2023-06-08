@@ -1,10 +1,13 @@
 package com.info.fut5app.domain;
 
+import java.util.UUID;
+
 public class Jugador {
 	
-	int id, altura, cantGoles, cantPartidosJugados, numeroCamiseta;
+	int altura, cantGoles, cantPartidosJugados, numeroCamiseta;
+	UUID id;
 	String nombre, apellido;
-	boolean esCapitan;
+	String esCapitan;
 	String posicion;
 	Equipo equipo;
 	
@@ -13,8 +16,8 @@ public class Jugador {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Jugador(int id, int altura, int cantGoles, int cantPartidosJugados, int numeroCamiseta, String nombre,
-			String apellido, boolean esCapitan, String posicion, Equipo equipo) {
+	public Jugador(UUID id, int altura, int cantGoles, int cantPartidosJugados, int numeroCamiseta, String nombre,
+			String apellido, String esCapitan, String posicion, Equipo equipo) {
 		super();
 		this.id = id;
 		this.altura = altura;
@@ -28,11 +31,13 @@ public class Jugador {
 		this.equipo = equipo;
 	}
 
-	public int getId() {
+	
+
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 
@@ -84,11 +89,11 @@ public class Jugador {
 		this.apellido = apellido;
 	}
 
-	public boolean isEsCapitan() {
+	public String getEsCapitan() {
 		return esCapitan;
 	}
 
-	public void setEsCapitan(boolean esCapitan) {
+	public void setEsCapitan(String esCapitan) {
 		this.esCapitan = esCapitan;
 	}
 

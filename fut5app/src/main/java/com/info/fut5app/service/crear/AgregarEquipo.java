@@ -28,10 +28,16 @@ public class AgregarEquipo {
 		
 		equipo.setFechaDeCreacion(LocalDate.of(agno, mes, diaDelMes));
 		
+		equipo.setJugadores(IndexarJugadores.listarJugadores());
+		
+		equipo.setEntrenador(AgregarEntrenador.crearEntrenador());
+		
 		Map<String,String> datosDelEquipo = new HashMap<String,String>();
 		
 		datosDelEquipo.put("Nombre del Equipo", equipo.getNombreDeEquipo());
 		datosDelEquipo.put("Fecha de Creación", diaDelMes+" - "+mes+" - "+agno);
+		datosDelEquipo.put("Jugadores", IndexarJugadores.listaDeJugadores.toString());
+		datosDelEquipo.put("Entrenador", equipo.getEntrenador().toString());
 		
 		System.out.println(datosDelEquipo.toString());
 		return equipo;

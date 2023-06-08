@@ -40,8 +40,7 @@ public class AgregarEquipo {
 		datosDelEquipo.put("Entrenador", equipo.getEntrenador().toString());
 		
 		System.out.println(datosDelEquipo.toString());
-		return equipo;
-	
+		return equipo;	
 	} //fin de método crearEquipo
-
+	
 }

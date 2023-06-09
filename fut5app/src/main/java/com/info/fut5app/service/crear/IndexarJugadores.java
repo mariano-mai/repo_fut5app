@@ -22,7 +22,7 @@ public class IndexarJugadores {
 		}
 		
 		for(Jugador jugador: listaDeJugadores) {
-			System.out.println("Jugador: "+jugador.getNombre()+ " - "+jugador.getPosicion());
+			System.out.println("Jugador: "+jugador.getNombre()+ " - "+jugador.getPosicion()+" - Equipo: ");
 		}
 		return listaDeJugadores;
 	}

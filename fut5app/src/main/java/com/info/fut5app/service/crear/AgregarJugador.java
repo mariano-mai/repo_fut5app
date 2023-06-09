@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.UUID;
 
+import com.info.fut5app.domain.Equipo;
 import com.info.fut5app.domain.Jugador;
 
 public class AgregarJugador {

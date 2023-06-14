@@ -24,5 +24,10 @@ public class EsCapitan {
 		}
 		return valor;
 	}
+	
+	public static String noEsCapitan() {
+		valor = "NO";
+		return valor;
+	}
 
 }

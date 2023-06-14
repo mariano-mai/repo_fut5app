@@ -31,7 +31,7 @@ public class AgregarJugador {
 		//System.out.println("Ingrese el número de camiseta del jugador: ");
 		//jugador.setNumeroCamiseta(entrada.nextInt());
 		
-		jugador.setEsCapitan(EsCapitan.esCapitan());
+		jugador.setEsCapitan(CondicionalEsCapitan.defineCapitania());
 		
 		//System.out.println("Ingrese la cantidad de partidos jugados por este jugador: ");
 		//jugador.setCantPartidosJugados(entrada.nextInt());

@@ -1,4 +1,4 @@
-package com.info.fut5app.service.crear;
+package com.info.fut5app.service.crear.jugador;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import com.info.fut5app.domain.Jugador;
 
 public class IndexarJugadores {
 	
-	static List<Jugador> listaDeJugadores = new ArrayList<>();
+	public static List<Jugador> listaDeJugadores = new ArrayList<>();
 	static int cantJugadores;
 	
 	public static List<Jugador> listarJugadores(){
@@ -22,7 +22,7 @@ public class IndexarJugadores {
 		}
 		
 		for(Jugador jugador: listaDeJugadores) {
-			System.out.println("Jugador: "+jugador.getNombre()+ " - "+jugador.getPosicion()+" - Equipo: ");
+			System.out.println("Jugador: "+jugador.getNombre()+ " - "+jugador.getPosicion()+" - Equipo: "+jugador.getEquipo());
 		}
 		return listaDeJugadores;
 	}

@@ -1,4 +1,4 @@
-package com.info.fut5app.service.crear;
+package com.info.fut5app.service.crear.jugador;
 
 import java.util.Scanner;
 

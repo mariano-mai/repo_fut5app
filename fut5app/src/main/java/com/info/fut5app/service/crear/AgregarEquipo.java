@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 import com.info.fut5app.domain.Equipo;
+import com.info.fut5app.service.crear.jugador.IndexarJugadores;
 
 public class AgregarEquipo {
 	
@@ -15,8 +16,9 @@ public class AgregarEquipo {
 		
 		Scanner entrada = new Scanner(System.in);
 		
-		System.out.println("Ingrese nombre del equipo: ");
-		equipo.setNombreDeEquipo(entrada.nextLine());
+		//System.out.println("Ingrese nombre del equipo: ");
+		//equipo.setNombreDeEquipo(entrada.nextLine());
+		equipo.setNombreDeEquipo(NombreDeEquipo.nombrarEquipo());
 		
 		System.out.println("Fecha de creación del Equipo");
 		System.out.println("Ingrese Día: ");
@@ -30,14 +32,14 @@ public class AgregarEquipo {
 		
 		equipo.setJugadores(IndexarJugadores.listarJugadores());
 		
-		equipo.setEntrenador(AgregarEntrenador.crearEntrenador());
+		//equipo.setEntrenador(AgregarEntrenador.crearEntrenador());
 		
 		Map<String,String> datosDelEquipo = new HashMap<String,String>();
 		
 		datosDelEquipo.put("Nombre del Equipo", equipo.getNombreDeEquipo());
 		datosDelEquipo.put("Fecha de Creación", diaDelMes+" - "+mes+" - "+agno);
 		datosDelEquipo.put("Jugadores", IndexarJugadores.listaDeJugadores.toString());
-		datosDelEquipo.put("Entrenador", equipo.getEntrenador().toString());
+		//datosDelEquipo.put("Entrenador", equipo.getEntrenador().toString());
 		
 		System.out.println(datosDelEquipo.toString());
 		return equipo;

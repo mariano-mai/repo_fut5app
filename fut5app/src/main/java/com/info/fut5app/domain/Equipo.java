@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Equipo {
 	
-	String nombreDeEquipo;
+	static String nombreDeEquipo;
 	LocalDate fechaDeCreacion;
 	List<Jugador> jugadores = new ArrayList<Jugador>();
 	Entrenador entrenador;
@@ -24,7 +24,7 @@ public class Equipo {
 		this.entrenador = entrenador;
 	}
 
-	public String getNombreDeEquipo() {
+	public static String getNombreDeEquipo() {
 		return nombreDeEquipo;
 	}
 

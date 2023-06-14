@@ -1,4 +1,4 @@
-package com.info.fut5app.service.crear;
+package com.info.fut5app.service.crear.jugador;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,11 +7,12 @@ import java.util.UUID;
 
 import com.info.fut5app.domain.Equipo;
 import com.info.fut5app.domain.Jugador;
+import com.info.fut5app.service.crear.AgregarEquipo;
 
 public class AgregarJugador {
 	
 	public static Jugador crearJugador() {
-		Jugador jugador = new Jugador();
+		Jugador jugador = new Jugador(Equipo.getNombreDeEquipo());
 		
 		Scanner entrada = new Scanner(System.in);
 		

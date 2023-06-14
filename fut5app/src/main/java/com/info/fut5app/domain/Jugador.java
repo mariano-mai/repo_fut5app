@@ -9,15 +9,22 @@ public class Jugador {
 	String nombre, apellido;
 	String esCapitan;
 	String posicion;
-	Equipo equipo;
+	String equipo;
 	
 	public Jugador() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+		public Jugador(String equipo) {
+		super();
+		this.equipo = equipo;
+	}
+
+
 
 	public Jugador(UUID id, int altura, int cantGoles, int cantPartidosJugados, int numeroCamiseta, String nombre,
-			String apellido, String esCapitan, String posicion, Equipo equipo) {
+			String apellido, String esCapitan, String posicion, String equipo) {
 		super();
 		this.id = id;
 		this.altura = altura;
@@ -97,11 +104,11 @@ public class Jugador {
 		this.esCapitan = esCapitan;
 	}
 
-	public Equipo getEquipo() {
+	public String getEquipo() {
 		return equipo;
 	}
 
-	public void setEquipo(Equipo equipo) {
+	public void setEquipo(String equipo) {
 		this.equipo = equipo;
 	}
 

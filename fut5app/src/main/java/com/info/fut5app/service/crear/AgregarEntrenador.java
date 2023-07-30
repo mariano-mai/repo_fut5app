@@ -2,24 +2,22 @@ package com.info.fut5app.service.crear;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 import com.info.fut5app.domain.Entrenador;
+import com.info.fut5app.service.entrada.consola.IngresoPorScanner;
 
 public class AgregarEntrenador {
 	
 	public static Entrenador crearEntrenador() {
 		Entrenador coach = new Entrenador();
-		
-		Scanner entrada = new Scanner(System.in);
 	
 		System.out.println("Ingrese el nombre del entrenador: ");
-		coach.setNombre(entrada.nextLine());
+		coach.setNombre(IngresoPorScanner.entradaDeTexto());
 		System.out.println("Ingrese apellido del entrenador: ");
-		coach.setApellido(entrada.nextLine());
+		coach.setApellido(IngresoPorScanner.entradaDeTexto());
 			
 		System.out.println("Ingrese edad del entrenador: ");
-		coach.setEdad(entrada.nextInt());
+		coach.setEdad(IngresoPorScanner.entradaDeNumero());
 			
 		String edadEnt2 = " "+coach.getEdad();
 			

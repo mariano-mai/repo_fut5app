@@ -4,44 +4,50 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 import com.info.fut5app.domain.Equipo;
+import com.info.fut5app.service.crear.jugador.EsCapitan;
 import com.info.fut5app.service.crear.jugador.IndexarJugadores;
+import com.info.fut5app.service.crear.jugador.MapearJugador;
+import com.info.fut5app.service.entrada.consola.IngresoPorScanner;
 
 public class AgregarEquipo {
 	
 	public static Equipo crearEquipo() {
 		Equipo equipo = new Equipo();
 		
-		Scanner entrada = new Scanner(System.in);
-		
-		//System.out.println("Ingrese nombre del equipo: ");
-		//equipo.setNombreDeEquipo(entrada.nextLine());
+		//nombrar el equipo
 		equipo.setNombreDeEquipo(NombreDeEquipo.nombrarEquipo());
 		
+		
+		//darle fecha de creación
 		System.out.println("Fecha de creación del Equipo");
 		System.out.println("Ingrese Día: ");
-		int diaDelMes = entrada.nextInt();
+		int diaDelMes = IngresoPorScanner.entradaDeNumero();
 		System.out.println("Ingrese Mes (número): ");
-		Month mes = Month.of(entrada.nextInt());
+		Month mes = Month.of(IngresoPorScanner.entradaDeNumero());
 		System.out.println("Ingrese Año: ");
-		int agno = entrada.nextInt();
+		int agno = IngresoPorScanner.entradaDeNumero();
 		
 		equipo.setFechaDeCreacion(LocalDate.of(agno, mes, diaDelMes));
 		
+		//agregarle jugadores
 		equipo.setJugadores(IndexarJugadores.listarJugadores());
 		
+		//MapearJugador.infoDeJugadores();
+		
+		//designar entrenador
 		//equipo.setEntrenador(AgregarEntrenador.crearEntrenador());
 		
 		Map<String,String> datosDelEquipo = new HashMap<String,String>();
 		
-		datosDelEquipo.put("Nombre del Equipo", equipo.getNombreDeEquipo());
+		datosDelEquipo.put("Nombre del Equipo", Equipo.getNombreDeEquipo());
 		datosDelEquipo.put("Fecha de Creación", diaDelMes+" - "+mes+" - "+agno);
-		datosDelEquipo.put("Jugadores", IndexarJugadores.listaDeJugadores.toString());
+		datosDelEquipo.put("Jugadores", IndexarJugadores.jugadores.toString());
 		//datosDelEquipo.put("Entrenador", equipo.getEntrenador().toString());
 		
-		System.out.println(datosDelEquipo.toString());
+		EsCapitan.resetearCapitan();
+		
 		return equipo;
 	} //fin de método crearEquipo
 	

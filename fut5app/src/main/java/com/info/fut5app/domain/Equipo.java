@@ -8,7 +8,7 @@ public class Equipo {
 	
 	static String nombreDeEquipo;
 	LocalDate fechaDeCreacion;
-	List<Jugador> jugadores = new ArrayList<Jugador>();
+	List<Jugador> jugadores;
 	Entrenador entrenador;
 	
 	public Equipo() {

@@ -1,6 +1,7 @@
 package com.info.fut5app.service.crear.jugador;
 
-import java.util.Scanner;
+
+import com.info.fut5app.service.entrada.consola.IngresoPorScanner;
 
 public class AsignaPosicion {
 	
@@ -11,10 +12,9 @@ public class AsignaPosicion {
 	static int opcion;
 	
 	public static String darPosicion() {
-		Scanner entrada = new Scanner(System.in);
-	
+			
 		System.out.println("Seleccione la posición del jugador: \n1: Arquero\n2: Defensor\n3: Mediocampista\n4: Delantero");
-		opcion = entrada.nextInt();
+		opcion = IngresoPorScanner.entradaDeNumero();
 
 		switch(opcion) {
 			case 1:

@@ -1,0 +1,16 @@
+public class jugadorMappingServiceImpl implements jugadorMappingService {
+	Map<UUID, Jugador> jugadorMap;
+
+	public jugadorMappingServiceImpl(){
+		jugadorMap = new HashMap<>();
+
+		Jugador jugador = new Jugador();
+		jugador.contenido;
+
+		jugadorMap.put(jugador.getUuid(), jugador);
+	}
+
+	public List<Jugador> getAllJugadores(){
+		return new ArrayList<>(jugadorMap.values());
+	}
+}

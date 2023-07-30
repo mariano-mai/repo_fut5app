@@ -1,30 +1,36 @@
 package com.info.fut5app.service.crear.jugador;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
 
 import com.info.fut5app.domain.Jugador;
+import com.info.fut5app.service.entrada.consola.IngresoPorScanner;
 
 public class IndexarJugadores {
 	
-	public static List<Jugador> listaDeJugadores = new ArrayList<>();
+	public static List<Jugador> jugadores = new ArrayList<>();
 	static int cantJugadores;
 	
 	public static List<Jugador> listarJugadores(){
-		Scanner entrada = new Scanner(System.in);
+				
+		MapearJugador.mapaDeJugadores = new HashMap<>();
 		
 		System.out.println("Ingrese la cantidad de jugadores: ");
-		cantJugadores = entrada.nextInt();
+		cantJugadores = IngresoPorScanner.entradaDeNumero();
 		
 		for(int i=0; i<cantJugadores; i++) {
-			listaDeJugadores.add(AgregarJugador.crearJugador());
+			jugadores.add(AgregarJugador.crearJugador());
+			MapearJugador.infoDeJugadores();
 		}
-		
-		for(Jugador jugador: listaDeJugadores) {
+		//esto imprime nomás, es para ver si funciona
+		for(Jugador jugador: jugadores) {
 			System.out.println("Jugador: "+jugador.getNombre()+" - Es capitán: "+jugador.getEsCapitan()+ " - "+jugador.getPosicion()+" - Equipo: "+jugador.getEquipo());
 		}
-		return listaDeJugadores;
+		System.out.println("MAPA DE LOS JUGADORES:");
+		System.out.println(MapearJugador.infoDeJugadores().values());
+		return jugadores;
 	}
+	
 
 }

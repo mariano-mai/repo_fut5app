@@ -1,6 +1,7 @@
 package com.info.fut5app.service.crear.jugador;
 
-import java.util.Scanner;
+
+import com.info.fut5app.service.entrada.consola.IngresoPorScanner;
 
 public class EsCapitan {
 	
@@ -9,10 +10,9 @@ public class EsCapitan {
 	static int opcion;
 	
 	public static String esCapitan() {
-		Scanner entrada = new Scanner(System.in);
-		
+				
 		System.out.println("¿El jugador es capitán? \n1- SÍ\n2- NO");
-		opcion = entrada.nextInt();
+		opcion = IngresoPorScanner.entradaDeNumero();
 		
 		switch(opcion) {
 		case 1:
@@ -28,6 +28,10 @@ public class EsCapitan {
 	public static String noEsCapitan() {
 		valor = "NO";
 		return valor;
+	}
+	
+	public static void resetearCapitan() {
+		opcion = 0;
 	}
 
 }

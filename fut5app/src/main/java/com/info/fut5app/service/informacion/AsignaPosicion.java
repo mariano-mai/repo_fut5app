@@ -1,4 +1,4 @@
-package com.info.fut5app.service.crear.jugador;
+package com.info.fut5app.service.informacion;
 
 
 import com.info.fut5app.service.entrada.consola.IngresoPorScanner;

@@ -6,10 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.info.fut5app.domain.Equipo;
-import com.info.fut5app.service.crear.jugador.EsCapitan;
+
 import com.info.fut5app.service.crear.jugador.IndexarJugadores;
 import com.info.fut5app.service.crear.jugador.MapearJugador;
 import com.info.fut5app.service.entrada.consola.IngresoPorScanner;
+import com.info.fut5app.service.informacion.InfoBasica;
+import com.info.fut5app.service.informacion.capitania.EsCapitan;
 
 public class AgregarEquipo {
 	
@@ -17,7 +19,7 @@ public class AgregarEquipo {
 		Equipo equipo = new Equipo();
 		
 		//nombrar el equipo
-		equipo.setNombreDeEquipo(NombreDeEquipo.nombrarEquipo());
+		equipo.setNombreDeEquipo(InfoBasica.nombrar());
 		
 		
 		//darle fecha de creación

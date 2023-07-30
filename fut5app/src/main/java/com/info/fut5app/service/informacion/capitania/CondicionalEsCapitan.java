@@ -1,4 +1,4 @@
-package com.info.fut5app.service.crear.jugador;
+package com.info.fut5app.service.informacion.capitania;
 
 public class CondicionalEsCapitan {
 	

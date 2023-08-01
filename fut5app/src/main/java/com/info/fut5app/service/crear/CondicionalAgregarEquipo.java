@@ -2,6 +2,7 @@ package com.info.fut5app.service.crear;
 
 
 import com.info.fut5app.service.entrada.consola.IngresoPorScanner;
+import com.info.fut5app.service.indexado.ListarObjetos;
 import com.info.fut5app.service.menu.VolverAMenu;
 
 public class CondicionalAgregarEquipo {
@@ -12,6 +13,7 @@ public class CondicionalAgregarEquipo {
 
 		do {
 			AgregarEquipo.crearEquipo();
+			ListarObjetos.listarEquipos();
 			System.out.println("¿DESEA AGREGAR OTRO EQUIPO? \n1- SÍ \n2- NO");
 			opcion = IngresoPorScanner.entradaDeNumero();
 		}while(opcion != 2);

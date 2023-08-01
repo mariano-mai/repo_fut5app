@@ -5,6 +5,7 @@ import com.info.fut5app.service.buscador.CompararInformacion;
 import com.info.fut5app.service.crear.CondicionalAgregarEquipo;
 import com.info.fut5app.service.entrada.consola.IngresoPorScanner;
 import com.info.fut5app.service.finDePrograma.SalirDePrograma;
+import com.info.fut5app.service.indexado.ListarObjetos;
 
 public class MenuDeOpciones {
 	
@@ -15,7 +16,7 @@ public class MenuDeOpciones {
 		System.out.println("\nBIENVENIDO AL MENÚ\n");
 		System.out.println("SELECCIONE UNA OPCIÓN");
 		
-		System.out.println("0 - SALIR\n1 - AGREGAR EQUIPO\n2 - BUSCAR JUGADOR(en proceso)\n3 - BUSCAR EQUIPO(en proceso)");	
+		System.out.println("0 - SALIR\n1 - AGREGAR EQUIPO\n2 - BUSCAR JUGADOR(en proceso)\n3 - MOSTRAR EQUIPOS(en proceso)");	
 		opcion = IngresoPorScanner.entradaDeNumero();
 		
 		switch(opcion) {
@@ -27,6 +28,9 @@ public class MenuDeOpciones {
 			break;
 		case 2:
 			CompararInformacion.comparar();
+			break;
+		case 3:
+			ListarObjetos.mostrarEquipos();
 			break;
 		}
 	}

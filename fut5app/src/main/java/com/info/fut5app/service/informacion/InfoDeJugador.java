@@ -7,19 +7,19 @@ public class InfoDeJugador {
 	static int cantGoles, cantPartidos, numCamiseta;
 	
 	public static int goles() {
-		System.out.println("INGRESE CANTIDAD DE GOLES: ");
+		System.out.println("Ingrese la Cantidad de Goles: ");
 		cantGoles = IngresoPorScanner.entradaDeNumero();
 		return cantGoles;
 	}
 	
 	public static int partidos() {
-		System.out.println("¿CUÁNTOS PARTIDOS HA JUGADO?");
+		System.out.println("¿Cuántos Partidos ha Jugado?");
 		cantPartidos = IngresoPorScanner.entradaDeNumero();
 		return cantPartidos;
 	}
 	
 	public static int camiseta() {
-		System.out.println("INGRESE NÚMERO DE CAMISETA: ");
+		System.out.println("Ingrese Número de Camiseta: ");
 		numCamiseta = IngresoPorScanner.entradaDeNumero();
 		return numCamiseta;
 	}

@@ -1,12 +1,11 @@
 package com.info.fut5app.domain;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Equipo {
 	
-	static String nombreDeEquipo;
+	String nombreDeEquipo;
 	LocalDate fechaDeCreacion;
 	List<Jugador> jugadores;
 	Entrenador entrenador;
@@ -24,7 +23,7 @@ public class Equipo {
 		this.entrenador = entrenador;
 	}
 
-	public static String getNombreDeEquipo() {
+	public String getNombreDeEquipo() {
 		return nombreDeEquipo;
 	}
 

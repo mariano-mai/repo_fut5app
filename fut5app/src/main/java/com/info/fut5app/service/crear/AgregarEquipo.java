@@ -9,12 +9,14 @@ import com.info.fut5app.service.informacion.capitania.EsCapitan;
 public class AgregarEquipo {
 	
 	public static Equipo equipo;
+	public static String auxliarNombreDeEquipo;
 	
 	public static Equipo crearEquipo() {
 		equipo = new Equipo();
 		
 		System.out.println("Nombre del Equipo\n");
 		equipo.setNombreDeEquipo(InfoBasica.nombrar());
+		auxliarNombreDeEquipo = equipo.getNombreDeEquipo();
 				
 		System.out.println("Fecha de creación del Equipo\n");
 		equipo.setFechaDeCreacion(InfoBasica.fecha());
